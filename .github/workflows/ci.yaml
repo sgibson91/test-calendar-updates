@@ -7,9 +7,10 @@ on:
       - edited
 
 jobs:
-  main:
+  test:
     runs-on: ubuntu-latest
+    env:
+      ISSUE_CONTEXT: ${{ github.event.issue }}
     steps:
-      - run: python3 main.py
-        env:
-          ISSUE_CONTEXT: ${{ github.event.issue }}
+      - run: |
+          python3 main.py
