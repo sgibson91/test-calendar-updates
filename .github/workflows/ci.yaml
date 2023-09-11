@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
       - run: python3 main.py
         env:
-          ISSUE_CONTEXT: "${{ github.event }}"
+          ISSUE_CONTEXT: "${{ github.event_name }}"
