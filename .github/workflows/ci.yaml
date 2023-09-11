@@ -1,6 +1,9 @@
+name: Test
+
 on:
   issues:
     types:
+      - opened
       - edited
 
 jobs:
