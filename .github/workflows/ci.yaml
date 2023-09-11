@@ -1,0 +1,12 @@
+on:
+  issues:
+    types:
+      - edited
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - run: python3 main.py
+        env:
+          ISSUE_CONTEXT: ${{ github.event.issue }}
