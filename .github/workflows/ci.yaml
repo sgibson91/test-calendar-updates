@@ -10,4 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ toJSON(github.event.issue) }}"
+      - uses: actions/checkout@v4
+      - run: python3 main.py
+        env:
+          ISSUE_CONTEXT: "${{ toJSON(github.event.issue) }}"
